@@ -59,10 +59,10 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   output = ""
   holiday_hash.each do |season, hash|
-    output += season.to_s.capitalize + "\n"
+    output += "#{season.to_s.capitalize}:\n"
     hash.each do |holiday, array|
-      output += "\t#{holiday.to_s.capitalize}: "
-      output += array.join(",") + "\n"
+      output += "  #{holiday.to_s.capitalize}: "
+      output += array.join(", ") + "\n"
     end
   end
   puts output
